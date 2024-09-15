@@ -5,10 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
 import com.example.cleansource.NewsAdapter
+import com.example.cleansource.NewsRepository
 import com.example.cleansource.NewsViewModel
+import com.example.cleansource.NewsViewModelFactory
+import com.example.cleansource.R
 import com.example.cleansource.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
