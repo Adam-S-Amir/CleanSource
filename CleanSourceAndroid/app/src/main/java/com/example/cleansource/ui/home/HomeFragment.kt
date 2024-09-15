@@ -7,36 +7,35 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.cleansource.NewsAdapter
+import com.example.cleansource.NewsViewModel
 import com.example.cleansource.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var viewModel: NewsViewModel
+    private lateinit var newsAdapter: NewsAdapter
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View {
-        val homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding: FragmentHomeBinding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_home, container, false
+        )
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val repository = NewsRepository()
+        val viewModelFactory = NewsViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(NewsViewModel::class.java)
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
-    }
+        newsAdapter = NewsAdapter()
+        binding.recyclerView.adapter = newsAdapter
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        viewModel.articles.observe(viewLifecycleOwner, Observer { articles ->
+            newsAdapter.submitList(articles)
+        })
+
+        viewModel.fetchTopHeadlines("5e9c3883-a7fa-4f6d-aa67-56dec392a9a9")
+
+        return binding.root
     }
 }

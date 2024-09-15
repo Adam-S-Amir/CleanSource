@@ -4,9 +4,9 @@ News Summary App
 
 ## Want
 
-i want to make an app that grabs all the popular news sources and all their articles, on articles where they have similar headlines, it'll allow the user to select a source or a summary of all articles. and if its stories that are not similar per each source, the menu to select sources will still have the only source and also th summary option. help me get this started, its an android app
+An app that grabs all the popular news sources and all their articles, on articles where they have similar headlines, it'll allow the user to select a source or a summary of all articles. And if its articles are not similar per source, the menu to select sources will have the only source and the summary option.
 
-## Copilot
+## How
 
 - [x] Step 1: Android IDE setup
 - [ ] Step 2: Plan Your App- Define Features: List out all the features you want in your app, such as:
