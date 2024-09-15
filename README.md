@@ -8,26 +8,27 @@ i want to make an app that grabs all the popular news sources and all their arti
 
 ## Copilot
 
-Step 1: Android IDE setup
-Step 2: Plan Your App- Define Features: List out all the features you want in your app, such as:
-    - Fetching news articles from multiple sources
-    - Comparing similar headlines
-    - Providing summaries
-    - User interface for selecting sources and viewing summaries
-    - Design UI/UX: Tools like Figma or Adobe XD can be helpful.
-Step 3: Fetch News Articles- Choose News APIs: Use APIs like NewsAPI, Google News API, or GDELT to fetch news articles.
-    - Set Up API Calls: Use Retrofit or OkHttp libraries to make network requests to these APIs.
-Step 4: Compare Headlines- Text Similarity Algorithm: Implement a text similarity algorithm to compare headlines. You can use libraries like Apache OpenNLP or Google's ML Kit for Natural Language Processing (NLP).
-    - Group Similar Articles: Group articles with similar headlines together.
-Step 5: Provide Summaries- Summarization Algorithm: Use a summarization algorithm to generate summaries of articles. You can use libraries like Sumy or implement your own using NLP techniques.
-    - Display Summaries: Provide an option for users to view summaries of grouped articles.
-Step 6: Build the User Interface- Main Screen: Display a list of news articles with options to view by source or summary.
-    - Detail Screen: Show the full article or summary when a user selects an article.
-    - Settings Screen: Allow users to customize their news sources and preferences.
-Step 7: Test Your App- Unit Testing: Write unit tests for your code to ensure it works as expected.
-    - UI Testing: Test the user interface to make sure it is intuitive and responsive.
-Step 8: Deploy Your App- Publish on Google Play: Follow the guidelines to publish your app on the Google Play Store.
-    - Gather Feedback: Encourage users to provide feedback and use it to improve your app.
+- [x] Step 1: Android IDE setup
+- [ ] Step 2: Plan Your App- Define Features: List out all the features you want in your app, such as:
+  - [ ] Fetching news articles from multiple sources
+  - [ ] Comparing similar headlines
+  - [ ] Providing summaries
+  - [ ] User interface for selecting sources and viewing summaries
+  - [ ] Design UI/UX: Tools like Figma or Adobe XD can be helpful.
+- [ ] Step 3: Fetch News Articles- Choose News APIs: Use APIs like NewsAPI, Google News API, or GDELT to fetch news articles.
+  - [ ] Set Up API Calls: Use Retrofit or OkHttp libraries to make network requests to these APIs.
+- [ ] Step 4: Compare Headlines- Text Similarity Algorithm: Implement a text similarity algorithm to compare headlines. You can use libraries like Apache OpenNLP or Google's ML Kit for Natural Language Processing (NLP).
+  - [ ] Group Similar Articles: Group articles with similar headlines together.
+  - [ ] Step 5: Provide Summaries- Summarization Algorithm: Use a summarization algorithm to generate summaries of articles. You can use libraries like Sumy or implement your own using NLP techniques.
+  - [ ] Display Summaries: Provide an option for users to view summaries of grouped articles.
+- [ ] Step 6: Build the User Interface- Main Screen: Display a list of news articles with options to view by source or summary.
+  - [ ] Detail Screen: Show the full article or summary when a user selects an article.
+  - [ ] Settings Screen: Allow users to customize their news sources and preferences.
+- [ ] Step 7: Test Your App- Unit Testing: Write unit tests for your code to ensure it works as expected.
+  - [ ] UI Testing: Test the user interface to make sure it is intuitive and responsive.
+- [ ] Step 8: Deploy Your App- Publish on Google Play: Follow the guidelines to publish your app on the Google Play Store.
+  - [ ] Gather Feedback: Encourage users to provide feedback and use it to improve your app.
+
 Example Code SnippetHere's a basic example of how you might set up a Retrofit call to fetch news articles:
 
 ```KOTLIN
@@ -59,5 +60,3 @@ call.enqueue(new Callback<NewsResponse>() {
     }
 });
 ```
-
-Feel free to ask if you need more detailed guidance on any specific part of the process. Good luck with your app development! 🚀
