@@ -1,6 +1,8 @@
 # CleanSource
 
-This app's goal is to aggregate articles from popular news sources and presents them in a user-friendly interface. For articles with similar headlines, it allows users to choose between viewing individual sources or a summarized version of all articles. If articles are unique to each source, the app provides options for viewing the single source and a summary option.
+This app's goal is to aggregate articles from popular news sources and presents them bias-free in a user-friendly interface. 
+
+For articles with similar headlines, it allows users to choose between viewing individual sources or a summarized version of all articles. If articles are unique to each source, the app provides options for viewing the single source and a summary option.
 
 ## How
 
